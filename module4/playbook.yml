@@ -1,0 +1,15 @@
+---
+- name: Retrieving Ansible Facts
+  gather_facts: true
+  hosts: all
+  become: true
+  tasks:
+    - name: Get facts for one Amazon host
+      debug:
+        var: ansible_facts
+    # - name: Get hosts distros
+    #   debug:
+    #     var: ansible_facts['distribution']
+    - name: Get OS family
+      debug:
+        var: ansible_os_family

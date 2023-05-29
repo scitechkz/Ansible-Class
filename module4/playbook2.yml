@@ -1,0 +1,19 @@
+---
+- name: Install Apache on Amazon Linus 2
+  gather_facts: false
+  hosts: linusservers
+  become: true
+  tasks:
+    - name: Install httpd
+      ansible.builtin.yum:
+        name: httpd
+        state: present
+- name: Install Apache web servers on Ubuntu
+  gather_facts: false
+  hosts: ubuntuservers
+  become: true
+  tasks:
+    - name: Install apache2
+      ansible.builtin.apt:
+        name: apache2
+        state: present

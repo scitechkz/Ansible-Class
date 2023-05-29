@@ -1,0 +1,9 @@
+---
+ - name: Git installation 
+    hosts: blueservers
+    become: true
+    task:
+ - name: install git
+    package: 
+    name: git
+    state: present

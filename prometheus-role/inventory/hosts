@@ -1,0 +1,2 @@
+[monitorserver]
+3.87.7.227 ansible_user=ec2-user
